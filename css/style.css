@@ -51,7 +51,7 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 }
 .loader.done{transform:translateY(-100%);}
 .loader-mark{
-  width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(201,161,90,.5);
+  height:76px;width:auto;object-fit:contain;
   opacity:0;animation:loaderFade 1.6s var(--ease) forwards;
 }
 .loader-word{
@@ -93,7 +93,7 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 }
 .logo{font-family:var(--serif);font-size:1.4rem;color:var(--cream);letter-spacing:.02em;display:flex;align-items:center;gap:.6rem;}
 .logo span{color:var(--gold);font-style:italic;}
-.logo-mark{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(201,161,90,.4);}
+.logo-mark{height:32px;width:auto;object-fit:contain;}
 .nav-links{display:flex;gap:2.1rem;}
 .nav-links a{
   position:relative;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--cream);opacity:.85;

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Ambassade | Beauty Salon</title>
+<meta name="description" content="Beauty Ambassade — moderan beauty salon. Nokti, trepavice i obrve, kosa, tretmani lica i tela. Zakažite termin.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="loader" id="loader">
+  <img src="images/logo.png" alt="Beauty Ambassade" class="loader-mark">
+  <span class="loader-word">Beauty&nbsp;Ambassade</span>
+</div>
+
+<div class="grain-overlay"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo"><img src="images/logo.png" alt="Beauty Ambassade" class="logo-mark">Beauty <span>Ambassade</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-text="Početna">Početna</a>
+      <a href="#about" data-text="O nama">O nama</a>
+      <a href="#services" data-text="Usluge">Usluge</a>
+      <a href="#gallery" data-text="Galerija">Galerija</a>
+      <a href="#testimonials" data-text="Utisci">Utisci</a>
+      <a href="#contact" data-text="Kontakt">Kontakt</a>
+    </nav>
+    <a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener" class="btn btn-outline nav-cta">Zakaži termin</a>
+    <button class="burger" id="burger" aria-label="Meni">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Početna</a>
+  <a href="#about">O nama</a>
+  <a href="#services">Usluge</a>
+  <a href="#gallery">Galerija</a>
+  <a href="#testimonials">Utisci</a>
+  <a href="#contact">Kontakt</a>
+  <a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener" class="btn btn-gold">Zakaži termin</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="images/hero.jpg" alt="Beauty Ambassade salon enterijer" loading="eager">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow reveal-up">Beauty salon</p>
+    <h1 class="hero-title">
+      <span class="reveal-line"><span>Lepota</span></span>
+      <span class="reveal-line"><span>je <em>ambasada</em></span></span>
+      <span class="reveal-line"><span>tvog stila.</span></span>
+    </h1>
+    <p class="hero-sub reveal-up delay-1">Nokti &middot; Trepavice &amp; Obrve &middot; Kosa &middot; Tretmani lica i tela — sve na jednom mestu, u ambijentu koji zaslužujete.</p>
+    <div class="hero-actions reveal-up delay-2">
+      <a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener" class="btn btn-gold magnetic">Zakaži termin</a>
+      <a href="#services" class="btn btn-ghost magnetic">Pogledaj usluge</a>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span></span>
+    <p>Skroluj</p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Nokti</span><span>&bull;</span><span>Trepavice</span><span>&bull;</span><span>Obrve</span><span>&bull;</span><span>Kosa</span><span>&bull;</span><span>Tretmani lica</span><span>&bull;</span><span>Manikir</span><span>&bull;</span><span>Pedikir</span><span>&bull;</span>
+    <span>Nokti</span><span>&bull;</span><span>Trepavice</span><span>&bull;</span><span>Obrve</span><span>&bull;</span><span>Kosa</span><span>&bull;</span><span>Tretmani lica</span><span>&bull;</span><span>Manikir</span><span>&bull;</span><span>Pedikir</span><span>&bull;</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-media reveal-scale">
+    <img src="images/about.jpg" alt="Tretman u Beauty Ambassade salonu" loading="lazy">
+    <div class="about-badge">
+      <strong id="counterYears">5</strong>
+      <span>godina iskustva</span>
+    </div>
+  </div>
+  <div class="about-content">
+    <p class="eyebrow reveal-up">O nama</p>
+    <h2 class="reveal-up">Salon u kojem se <em>nega</em> pretvara u ritual</h2>
+    <p class="reveal-up delay-1">Beauty Ambassade je prostor posvećen tvom izgledu i osećaju sigurnosti — od preciznog manikira do nege lica koja ti vraća sjaj. Naš tim pažljivo bira proizvode i tehnike koje traju, uz atmosferu u kojoj se odmah osećaš opušteno.</p>
+    <div class="about-stats reveal-up delay-2">
+      <div class="stat">
+        <strong data-count="4770">0</strong>
+        <span>pratilaca na Instagramu</span>
+      </div>
+      <div class="stat">
+        <strong data-count="1500">0</strong>
+        <span>zadovoljnih klijentkinja</span>
+      </div>
+      <div class="stat">
+        <strong data-count="4">0</strong>
+        <span>vrste usluga</span>
+      </div>
+    </div>
+    <a href="#services" class="btn btn-dark magnetic reveal-up delay-3">Istraži usluge</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-head">
+    <p class="eyebrow reveal-up">Usluge</p>
+    <h2 class="reveal-up">Sve što ti treba za savršeno izdanje</h2>
+    <p class="section-sub reveal-up delay-1">Cene su okvirne — za tačan cenovnik i termin, pišite nam na Instagram.</p>
+  </div>
+
+  <div class="services-grid">
+    <article class="service-card reveal-up">
+      <div class="service-img"><img src="images/service-nails.jpg" alt="Nokti - manikir i pedikir" loading="lazy"></div>
+      <div class="service-body">
+        <span class="service-num">01</span>
+        <h3>Nokti</h3>
+        <p>Manikir, pedikir, gel i akril nadogradnja, nail art po želji.</p>
+        <ul>
+          <li>Klasični / gel manikir</li>
+          <li>Gel &amp; akril nadogradnja</li>
+          <li>Pedikir</li>
+          <li>Nail art</li>
+        </ul>
+        <span class="service-price">od 1.500 din</span>
+      </div>
+    </article>
+
+    <article class="service-card reveal-up delay-1">
+      <div class="service-img"><img src="images/service-lashes.jpg" alt="Trepavice i obrve" loading="lazy"></div>
+      <div class="service-body">
+        <span class="service-num">02</span>
+        <h3>Trepavice &amp; obrve</h3>
+        <p>Extension trepavica, lifting, laminacija i oblikovanje obrva.</p>
+        <ul>
+          <li>Extension trepavica (1:1 / volumen)</li>
+          <li>Lash lifting</li>
+          <li>Laminacija obrva</li>
+          <li>Henna &amp; oblikovanje</li>
+        </ul>
+        <span class="service-price">od 2.000 din</span>
+      </div>
+    </article>
+
+    <article class="service-card reveal-up delay-2">
+      <div class="service-img"><img src="images/service-hair.jpg" alt="Kosa - frizerski tretmani" loading="lazy"></div>
+      <div class="service-body">
+        <span class="service-num">03</span>
+        <h3>Kosa</h3>
+        <p>Šišanje, farbanje, styling i nega za zdrav i sjajan izgled kose.</p>
+        <ul>
+          <li>Šišanje &amp; styling</li>
+          <li>Farbanje / feniranje</li>
+          <li>Keratin tretmani</li>
+          <li>Svečane frizure</li>
+        </ul>
+        <span class="service-price">od 1.800 din</span>
+      </div>
+    </article>
+
+    <article class="service-card reveal-up delay-3">
+      <div class="service-img"><img src="images/service-facial.jpg" alt="Tretmani lica i tela" loading="lazy"></div>
+      <div class="service-body">
+        <span class="service-num">04</span>
+        <h3>Tretmani lica &amp; tela</h3>
+        <p>Čišćenje lica, hidratacija, anti-age i relax masaže.</p>
+        <ul>
+          <li>Dubinsko čišćenje lica</li>
+          <li>Hydra facial / anti-age</li>
+          <li>Relax &amp; sport masaža</li>
+          <li>Depilacija</li>
+        </ul>
+        <span class="service-price">od 2.500 din</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-head">
+    <p class="eyebrow reveal-up">Galerija</p>
+    <h2 class="reveal-up">Trenutci iz salona</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item big reveal-up"><img src="images/hero.jpg" alt="Enterijer salona" loading="lazy"></div>
+    <div class="gallery-item reveal-up delay-1"><img src="images/service-nails.jpg" alt="Manikir" loading="lazy"></div>
+    <div class="gallery-item reveal-up delay-2"><img src="images/service-lashes.jpg" alt="Trepavice" loading="lazy"></div>
+    <div class="gallery-item reveal-up delay-1"><img src="images/about.jpg" alt="Tretman" loading="lazy"></div>
+    <div class="gallery-item reveal-up delay-2"><img src="images/service-hair.jpg" alt="Kosa" loading="lazy"></div>
+    <div class="gallery-item reveal-up delay-3"><img src="images/service-facial.jpg" alt="Tretman lica" loading="lazy"></div>
+  </div>
+  <a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener" class="btn btn-outline-dark reveal-up center-btn">
+    Pratite nas @beauty.ambassade.salon
+  </a>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-head light">
+    <p class="eyebrow reveal-up">Utisci</p>
+    <h2 class="reveal-up">Reči naših klijentkinja</h2>
+  </div>
+  <div class="testi-track" id="testiTrack">
+    <div class="testi-card reveal-up">
+      <p>&ldquo;Atmosfera je nestvarna, a manikir mi traje nedeljama. Konačno salon kojem se rado vraćam.&rdquo;</p>
+      <span>— Jovana M.</span>
+    </div>
+    <div class="testi-card reveal-up delay-1">
+      <p>&ldquo;Trepavice su izgledale prirodno i savršeno, devojke su izuzetno profesionalne.&rdquo;</p>
+      <span>— Milica S.</span>
+    </div>
+    <div class="testi-card reveal-up delay-2">
+      <p>&ldquo;Tretman lica mi je bukvalno promenio kožu. Osoblje pažljivo objasni svaki korak.&rdquo;</p>
+      <span>— Ana K.</span>
+    </div>
+    <div class="testi-card reveal-up delay-3">
+      <p>&ldquo;Najbolje frizerske ruke u gradu — izlazim sa osmehom svaki put.&rdquo;</p>
+      <span>— Tamara P.</span>
+    </div>
+  </div>
+  <div class="testi-dots" id="testiDots"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <p class="eyebrow reveal-up">Kontakt</p>
+      <h2 class="reveal-up">Zakaži svoj termin</h2>
+      <p class="reveal-up delay-1">Najbrži način da zakažeš termin je poruka na Instagramu — javljamo se u toku dana.</p>
+      <ul class="contact-list reveal-up delay-2">
+        <li>
+          <strong>Instagram</strong>
+          <a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener">@beauty.ambassade.salon</a>
+        </li>
+        <li>
+          <strong>Radno vreme</strong>
+          <span>Pon – Sub: 09:00 – 20:00h</span>
+        </li>
+        <li>
+          <strong>Lokacija</strong>
+          <span>Beograd, Srbija</span>
+        </li>
+      </ul>
+      <a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener" class="btn btn-gold magnetic reveal-up delay-3">Piši nam na Instagram</a>
+    </div>
+    <form class="contact-form reveal-up delay-1" id="contactForm">
+      <p class="form-hint">Ostavi poruku — javljamo se za zakazivanje termina.</p>
+      <div class="form-row">
+        <input type="text" placeholder="Ime i prezime" required>
+        <input type="tel" placeholder="Broj telefona" required>
+      </div>
+      <input type="text" placeholder="Usluga koja te interesuje">
+      <textarea rows="4" placeholder="Poruka"></textarea>
+      <button type="submit" class="btn btn-dark magnetic">Pošalji upit</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#home" class="logo"><img src="images/logo.png" alt="Beauty Ambassade" class="logo-mark">Beauty <span>Ambassade</span></a>
+    <nav class="footer-links">
+      <a href="#about">O nama</a>
+      <a href="#services">Usluge</a>
+      <a href="#gallery">Galerija</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+    <a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+    </a>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year"></span> Beauty Ambassade. Sva prava zadržana.</span>
+  </div>
+</footer>
+
+<a href="https://www.instagram.com/beauty.ambassade.salon/" target="_blank" rel="noopener" class="float-btn" aria-label="Instagram">
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+</a>
+
+<button class="to-top" id="toTop" aria-label="Nazad na vrh">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

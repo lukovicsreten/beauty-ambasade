@@ -243,6 +243,9 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 .contact-list li{display:flex;flex-direction:column;gap:.15rem;border-bottom:1px solid rgba(0,0,0,.08);padding-bottom:.8rem;}
 .contact-list strong{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);}
 .contact-list a,.contact-list span{font-family:var(--serif);font-size:1.15rem;}
+.ig-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--black);transition:color .3s;}
+.ig-link svg{flex-shrink:0;color:var(--gold);}
+.ig-link:hover{color:var(--gold);}
 .contact-form{background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:8px;padding:2.4rem;display:flex;flex-direction:column;gap:1rem;}
 .form-hint{font-size:.85rem;color:var(--text-soft);margin-bottom:.4rem;}
 .form-row{display:flex;gap:1rem;}

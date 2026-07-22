@@ -236,6 +236,8 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 
 /* ============ CONTACT ============ */
 .contact{max-width:1320px;margin:8rem auto;padding:0 2.4rem;}
+.map-embed{margin-top:3rem;border-radius:8px;overflow:hidden;filter:grayscale(.2) contrast(1.05);}
+.map-embed iframe{width:100%;height:360px;border:0;display:block;}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;}
 .contact-info h2{margin:.4rem 0 1rem;}
 .contact-info p{color:var(--text-soft);font-weight:300;max-width:420px;line-height:1.6;}

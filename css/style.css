@@ -242,6 +242,16 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 .service-detail-text ul li{color:var(--text-soft);font-weight:300;font-size:1.02rem;padding-left:1.2rem;position:relative;}
 .service-detail-text ul li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:1px;background:var(--gold);}
 .service-detail-text ul li strong{color:var(--black);font-weight:600;}
+.service-detail-text h2 + .price-table-wrap{margin-top:0;}
+.price-table-wrap{overflow-x:auto;margin:0 0 2rem;border:1px solid rgba(0,0,0,.08);border-radius:8px;}
+.price-table{width:100%;border-collapse:collapse;min-width:480px;}
+.price-table th,.price-table td{padding:.9rem 1.2rem;text-align:left;font-size:.92rem;white-space:nowrap;}
+.price-table thead th{background:var(--black);color:var(--gold-light);font-family:var(--serif);font-size:1rem;font-weight:500;}
+.price-table thead th:first-child{border-top-left-radius:8px;}
+.price-table thead th:last-child{border-top-right-radius:8px;}
+.price-table tbody td:first-child{font-family:var(--serif);font-size:1.05rem;color:var(--black);}
+.price-table tbody td{color:var(--text-soft);border-top:1px solid rgba(0,0,0,.06);}
+.price-table tbody tr:nth-child(even){background:rgba(201,161,90,.05);}
 
 /* ============ CONTACT ============ */
 .contact{max-width:1320px;margin:8rem auto;padding:0 2.4rem;}

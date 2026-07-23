@@ -7,31 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   setTimeout(() => loader.classList.add('done'), 2200);
 
-  /* ---------- CUSTOM CURSOR ---------- */
-  const dot = document.getElementById('cursorDot');
-  const ring = document.getElementById('cursorRing');
-  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-  window.addEventListener('mousemove', e => {
-    mouseX = e.clientX; mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
-  });
-
-  function animateRing(){
-    ringX += (mouseX - ringX) * 0.16;
-    ringY += (mouseY - ringY) * 0.16;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  document.querySelectorAll('a, button, .service-card, .gallery-item').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
-  });
-
   /* ---------- MAGNETIC BUTTONS ---------- */
   document.querySelectorAll('.magnetic').forEach(btn => {
     btn.addEventListener('mousemove', e => {

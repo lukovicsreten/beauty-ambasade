@@ -117,15 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
     [...dotsWrap.children].forEach((d, i) => d.classList.toggle('active', i === index));
   }, { passive: true });
 
-  /* ---------- CONTACT FORM (no backend — guides to Instagram) ---------- */
-  const form = document.getElementById('contactForm');
-  const note = document.getElementById('formNote');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    note.textContent = 'Hvala! Za brži odgovor, pošalji nam ovu poruku direktno na Instagram.';
-    setTimeout(() => window.open('https://www.instagram.com/beauty.ambassade.salon/', '_blank'), 900);
-  });
-
   /* ---------- FOOTER YEAR ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
 

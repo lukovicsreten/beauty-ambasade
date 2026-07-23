@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- LOADER ---------- */
   const loader = document.getElementById('loader');
-  window.addEventListener('load', () => {
-    setTimeout(() => loader.classList.add('done'), 600);
-  });
-  setTimeout(() => loader.classList.add('done'), 2200);
+  if (loader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => loader.classList.add('done'), 600);
+    });
+    setTimeout(() => loader.classList.add('done'), 2200);
+  }
 
   /* ---------- MAGNETIC BUTTONS ---------- */
   document.querySelectorAll('.magnetic').forEach(btn => {
@@ -21,22 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- NAVBAR SCROLLED STATE ---------- */
   const navbar = document.getElementById('navbar');
   const toTop = document.getElementById('toTop');
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY > 60;
-    navbar.classList.toggle('scrolled', scrolled);
-    toTop.classList.toggle('show', window.scrollY > 500);
-  });
-
-  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  if (navbar && toTop) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY > 60;
+      navbar.classList.toggle('scrolled', scrolled);
+      toTop.classList.toggle('show', window.scrollY > 500);
+    });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
 
   /* ---------- MOBILE MENU ---------- */
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobileMenu.classList.toggle('open');
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+  if (burger && mobileMenu) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+  }
 
   /* ---------- SCROLL REVEAL ---------- */
   const revealEls = document.querySelectorAll('.reveal-up, .reveal-scale');
@@ -76,23 +81,26 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- TESTIMONIAL DOTS ---------- */
   const track = document.getElementById('testiTrack');
   const dotsWrap = document.getElementById('testiDots');
-  const cards = track.querySelectorAll('.testi-card');
+  if (track && dotsWrap) {
+    const cards = track.querySelectorAll('.testi-card');
 
-  cards.forEach((_, i) => {
-    const d = document.createElement('span');
-    if (i === 0) d.classList.add('active');
-    d.addEventListener('click', () => {
-      cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    cards.forEach((_, i) => {
+      const d = document.createElement('span');
+      if (i === 0) d.classList.add('active');
+      d.addEventListener('click', () => {
+        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      });
+      dotsWrap.appendChild(d);
     });
-    dotsWrap.appendChild(d);
-  });
 
-  track.addEventListener('scroll', () => {
-    const index = Math.round(track.scrollLeft / cards[0].offsetWidth);
-    [...dotsWrap.children].forEach((d, i) => d.classList.toggle('active', i === index));
-  }, { passive: true });
+    track.addEventListener('scroll', () => {
+      const index = Math.round(track.scrollLeft / cards[0].offsetWidth);
+      [...dotsWrap.children].forEach((d, i) => d.classList.toggle('active', i === index));
+    }, { passive: true });
+  }
 
   /* ---------- FOOTER YEAR ---------- */
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });

@@ -226,6 +226,18 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 .testi-dots span{width:6px;height:6px;border-radius:50%;background:rgba(247,242,234,.3);transition:.3s;}
 .testi-dots span.active{background:var(--gold);width:20px;border-radius:4px;}
 
+/* ============ SERVICE DETAIL PAGE ============ */
+.page-hero{background:var(--black);padding:9rem 2.4rem 4rem;}
+.page-hero .back-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--cream);opacity:.65;font-size:.85rem;margin-bottom:1.8rem;transition:opacity .3s,color .3s;}
+.page-hero .back-link:hover{opacity:1;color:var(--gold);}
+.page-hero .eyebrow{margin-bottom:.6rem;}
+.page-hero h1{color:var(--cream);font-size:clamp(2.6rem,6vw,4.2rem);}
+.service-detail{max-width:900px;margin:5rem auto;padding:0 2.4rem;}
+.service-detail-media{border-radius:8px;overflow:hidden;margin-bottom:3rem;aspect-ratio:16/9;}
+.service-detail-media img{width:100%;height:100%;}
+.service-detail-text p{color:var(--text-soft);font-weight:300;line-height:1.8;font-size:1.05rem;margin-bottom:1.4rem;max-width:760px;}
+.service-detail-text .service-price{display:block;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:1.6rem 0;}
+
 /* ============ CONTACT ============ */
 .contact{max-width:1320px;margin:8rem auto;padding:0 2.4rem;}
 .map-embed{margin-top:3rem;border-radius:8px;overflow:hidden;filter:grayscale(.2) contrast(1.05);}

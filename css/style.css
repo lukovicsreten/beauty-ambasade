@@ -237,6 +237,10 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 .service-detail-media img{width:100%;height:100%;}
 .service-detail-text p{color:var(--text-soft);font-weight:300;line-height:1.8;font-size:1.05rem;margin-bottom:1.4rem;max-width:760px;}
 .service-detail-text .service-price{display:block;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:1.6rem 0;}
+.service-detail-text h2{font-size:1.4rem;margin:2rem 0 1rem;}
+.service-detail-text ul{margin:0 0 1.4rem;display:flex;flex-direction:column;gap:.5rem;}
+.service-detail-text ul li{color:var(--text-soft);font-weight:300;font-size:1.02rem;padding-left:1.2rem;position:relative;}
+.service-detail-text ul li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:1px;background:var(--gold);}
 
 /* ============ CONTACT ============ */
 .contact{max-width:1320px;margin:8rem auto;padding:0 2.4rem;}

@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
   revealEls.forEach(el => observer.observe(el));
 
+  // Safety net: some browsers delay/skip IntersectionObserver callbacks
+  // (e.g. backgrounded tabs). Never leave content permanently invisible.
+  setTimeout(() => {
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }, 2000);
+
   /* ---------- ANIMATED COUNTERS ---------- */
   const counters = document.querySelectorAll('[data-count]');
   const counterObserver = new IntersectionObserver((entries) => {

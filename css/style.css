@@ -241,6 +241,7 @@ h2{font-size:clamp(2.1rem,4vw,3.4rem);}
 .service-detail-text ul{margin:0 0 1.4rem;display:flex;flex-direction:column;gap:.5rem;}
 .service-detail-text ul li{color:var(--text-soft);font-weight:300;font-size:1.02rem;padding-left:1.2rem;position:relative;}
 .service-detail-text ul li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:1px;background:var(--gold);}
+.service-detail-text ul li strong{color:var(--black);font-weight:600;}
 
 /* ============ CONTACT ============ */
 .contact{max-width:1320px;margin:8rem auto;padding:0 2.4rem;}

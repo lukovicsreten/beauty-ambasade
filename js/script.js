@@ -105,6 +105,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  /* ---------- LIGHTBOX ---------- */
+  const galleryImgs = document.querySelectorAll('.gallery-item img');
+  if (galleryImgs.length) {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+      <button class="lightbox-close" aria-label="Zatvori">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Prethodna">&#8249;</button>
+      <img src="" alt="">
+      <button class="lightbox-nav lightbox-next" aria-label="Sledeća">&#8250;</button>
+    `;
+    document.body.appendChild(lightbox);
+    const lbImg = lightbox.querySelector('img');
+    const items = [...galleryImgs];
+    let current = 0;
+
+    const showLightbox = (i) => {
+      current = (i + items.length) % items.length;
+      lbImg.src = items[current].src;
+      lbImg.alt = items[current].alt;
+      lightbox.classList.add('open');
+    };
+    const closeLightbox = () => lightbox.classList.remove('open');
+
+    items.forEach((img, i) => img.addEventListener('click', () => showLightbox(i)));
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', () => showLightbox(current - 1));
+    lightbox.querySelector('.lightbox-next').addEventListener('click', () => showLightbox(current + 1));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showLightbox(current - 1);
+      if (e.key === 'ArrowRight') showLightbox(current + 1);
+    });
+  }
+
   /* ---------- FOOTER YEAR ---------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

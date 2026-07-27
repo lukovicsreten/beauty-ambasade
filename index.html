@@ -22,6 +22,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- SCHEMA: LocalBusiness + AggregateRating -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,11 +53,83 @@
     "closes": "20:00"
   },
   "areaServed": ["Beograd", "Novi Beograd", "Bežanijska Kosa"],
-  "sameAs": ["https://www.instagram.com/beauty.ambassade.salon/"]
+  "sameAs": ["https://www.instagram.com/beauty.ambassade.salon/"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "53",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
 </script>
+
+<style>
+/* DODATNI STILOVI ZA PRIKAZ RECENZIJA */
+.google-rating-banner {
+  background: #f8f5f0;
+  padding: 12px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e8e0d6;
+}
+.google-rating-banner-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+}
+.google-rating-banner .stars {
+  color: #fbbc04;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.google-rating-banner .rating-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.google-rating-banner .rating-count {
+  font-size: 15px;
+  color: #555;
+}
+.google-rating-banner .rating-link {
+  color: #c8a97e;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.google-rating-banner .rating-link:hover {
+  color: #a8885e;
+}
+@media (max-width: 600px) {
+  .google-rating-banner-inner {
+    gap: 6px;
+  }
+  .google-rating-banner .stars {
+    font-size: 16px;
+  }
+  .google-rating-banner .rating-number {
+    font-size: 15px;
+  }
+  .google-rating-banner .rating-count {
+    font-size: 13px;
+  }
+}
+</style>
 </head>
 <body>
+
+<!-- GOOGLE RECENZIJE - BANNER (VIDLJIV DEO) -->
+<div class="google-rating-banner">
+  <div class="google-rating-banner-inner">
+    <span class="stars">★★★★★</span>
+    <span class="rating-number">4.8</span>
+    <span class="rating-count">(<strong>53</strong> Google recenzije)</span>
+    <a href="https://g.page/r/CTxqVcVSG-jHEAg/review" target="_blank" rel="noopener" class="rating-link">Ostavi recenziju →</a>
+  </div>
+</div>
 
 <div class="loader" id="loader">
   <img src="images/logo-wordmark-dark.png" alt="Ambassade Beauty" class="loader-mark">

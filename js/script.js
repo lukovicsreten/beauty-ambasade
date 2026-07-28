@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
     toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
+  /* ---------- RATING BANNER OFFSET (gura navbar/meni ispod trake) ---------- */
+  const ratingBanner = document.querySelector('.google-rating-banner');
+  if (ratingBanner) {
+    const syncBannerOffset = () => {
+      document.documentElement.style.setProperty('--rating-banner-h', ratingBanner.offsetHeight + 'px');
+    };
+    syncBannerOffset();
+    window.addEventListener('resize', syncBannerOffset);
+  }
+
   /* ---------- MOBILE MENU ---------- */
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');

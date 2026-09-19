@@ -46,20 +46,12 @@
     "latitude": 44.8062913,
     "longitude": 20.3666451
   },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "09:00",
-      "closes": "20:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Sunday"],
-      "opens": "09:00",
-      "closes": "14:00"
-    }
-  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
   "areaServed": ["Beograd", "Novi Beograd", "Bežanijska Kosa"],
   "sameAs": ["https://www.instagram.com/beauty.ambassade.salon/"],
   "aggregateRating": {
@@ -416,7 +408,6 @@
         <li>
           <strong>Radno vreme</strong>
           <span>Pon – Sub: 09:00 – 20:00h</span>
-          <span>Ned: 09:00 – 14:00h</span>
         </li>
         <li>
           <strong>Lokacija</strong>
